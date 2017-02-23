@@ -1,0 +1,25 @@
+{
+  "name": "bolg",
+  "version": "1.0.0",
+  "description": "bolg",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kusanyao/bolg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kusanyao/bolg/issues"
+  },
+  "homepage": "https://github.com/kusanyao/bolg#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "jade": "^1.11.0"
+  }
+}
