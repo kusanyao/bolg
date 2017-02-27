@@ -4,8 +4,9 @@ var Article = require('../models/article');
 
 module.exports.save = function (req,res) {
 	var _articleObj = {
-		title: req.body.title,
-		content: req.body.content
+		title:    req.body.title,
+		abstract: req.body.abstract,
+		content:  req.body.content
 	};
 
 	var _saveArticle = function(article){
@@ -54,6 +55,6 @@ module.exports.edit = function (req,res) {
 			res.render('article/edit',{article:result});
 		});
 	}else{
-		res.render('article/edit');
+		res.render('article/edit',{article:{}});
 	}
 }

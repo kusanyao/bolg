@@ -3,12 +3,16 @@ extends ../public/layout
 block content
 	.edit-form
 		form
-			input(type="hidden",name="id",value="#{article.id}")
+			input(type="hidden",name="id",value=article.id)
 			label 标题
 			div
-				input(type="text",name="title",value="#{article.title}")
+				input(type="text",name="title",value=article.title)
+			label 摘要
+			div
+				input(type="text",name="abstract",value=article.abstract)
 			label 内容
 			div
-				textarea(name="content") #{article.content}
+				textarea(name="content")
+					=article.content
 			div
 				input(id="atricle-edit",type="button",value="submit")

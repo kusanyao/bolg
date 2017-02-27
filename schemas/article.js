@@ -4,6 +4,7 @@ var Schema   = mongoose.Schema;
 
 var ArticleSchema = new Schema({
 	title: String,
+	abstract: String,
 	content: String,
 	meta:{
 		createAt:{
