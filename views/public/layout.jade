@@ -1,8 +1,12 @@
 doctype html
 html
-	head
-		include ./head
-	body
-		include ./header
-		block content
-		include ./footer
+    head
+        include ./head
+    body
+        include ./header
+        section.g-bd
+            .g-bd-l
+                block content
+            .g-bd-r
+                include ./right
+        include ./footer
