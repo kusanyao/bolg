@@ -22,7 +22,7 @@ module.exports.save = function (req,res) {
 			if(err){
 				return res.json({code:'100','msg':'找不到数据'});;
 			}
-			_article = _.extend(result,articleObj);
+			_article = _.extend(result,_articleObj);
 			_saveArticle(_article);
 		});
 	}else{
