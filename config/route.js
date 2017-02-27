@@ -13,6 +13,7 @@ module.exports = function (app) {
 		next();
 	});
 	app.get('/', Index.index);
+	app.get('/article/:id', Article.detail); //文章详情页面
 	app.get('/article/edit', User.checkLogin, Article.edit);
 	app.post('/article/edit', User.checkLogin, Article.edit_ac);
 

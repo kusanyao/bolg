@@ -1,17 +1,10 @@
 var mongoose = require('mongoose');
-var Schema   = mongoose.Schema
-var ObjectId = Schema.Types.ObjectId
+var Schema   = mongoose.Schema;
+
 
 var ArticleSchema = new Schema({
-	title:String,
-	origin:String,
-	author:String,
-	link:String,
-	info:String,
-	detail:String,
-	views:Number,
-	jviews:Number,
-	category: [{type: ObjectId, ref: 'category'}],
+	title: String,
+	content: String,
 	meta:{
 		createAt:{
 			type:Date,
