@@ -122,3 +122,13 @@ a {
 	text-indent: 2em;
 	font-size: 14px;
 }
+
+.edit-form{
+	margin-bottom: 20px;
+	padding: 10px 30px 30px;
+	background-color: #ffffff;
+	min-height: 150px;
+	box-shadow: 1px 1px 5px #888888;
+	color: #999;
+	line-height: 25px;
+}

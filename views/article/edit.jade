@@ -1,10 +1,12 @@
 extends ../public/layout
 
 block content
-	form
-		label 标题
-		input(type="text",name="article[title]")
-		label 来源
-		input(type="text",name="article[source]")
-		label 内容
-		input(type="text",name="article[source]")
+	section.g-bd
+		.g-bd-l
+			.edit-form
+				label 标题
+				div
+					input(type="text",name="article[title]")
+				label 内容
+				div
+					textarea
