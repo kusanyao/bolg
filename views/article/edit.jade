@@ -2,11 +2,13 @@ extends ../public/layout
 
 block content
 	.edit-form
-		label 标题
-		div
-			input(type="text",name="article[title]")
-		label 内容
-		div
-			textarea
-		div
-			input(type="submit",value="submit")
+		form
+			input(type="hidden",value="")
+			label 标题
+			div
+				input(type="text",name="title")
+			label 内容
+			div
+				textarea(name="content")
+			div
+				input(id="atricle-edit",type="button",value="submit")

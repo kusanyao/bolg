@@ -13,11 +13,13 @@ module.exports = function (app) {
 		next();
 	});
 	app.get('/', Index.index);
-	app.get('/login', User.login);
-	app.post('/login_ac', User.login_ac);
-	app.get('/logout', User.logout);
-	// app.get('/register',User.register);
-
-	// app.get('/article:id', Article.logout);
 	app.get('/article/edit', User.checkLogin, Article.edit);
+	app.post('/article/edit', User.checkLogin, Article.edit_ac);
+
+
+
+	// app.get('/login', User.login);
+	// app.post('/login_ac', User.login_ac);
+	// app.get('/logout', User.logout);
+	
 }

@@ -2,6 +2,7 @@
  * blog
  */
 var express      = require('express');
+var bodyParser   = require("body-parser"); 
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
 var mongoose     = require('mongoose');
@@ -16,6 +17,8 @@ app.use(function(req,res,next){
 	}
 	next();
 });
+//获取post参数
+app.use(bodyParser.urlencoded({ extended: false }));
 var dbUrl = 'mongodb://localhost/blog';
 mongoose.Promise = global.Promise;
 mongoose.connect(dbUrl); //连接数据库
