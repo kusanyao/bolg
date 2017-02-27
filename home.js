@@ -4,6 +4,7 @@
 var express      = require('express');
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
+var mongoose     = require('mongoose');
 var conf         = require('./config/config');
 
 var app          = express();
@@ -15,7 +16,11 @@ app.use(function(req,res,next){
 	}
 	next();
 });
+var dbUrl = 'mongodb://localhost/blog';
+mongoose.Promise = global.Promise;
+mongoose.connect(dbUrl); //连接数据库
 app.use(cookieParser());
+
 app.use(session({
 	secret: '12345',
 	name: 'testapp',   //这里的name值得是cookie的name，默认cookie的name是：connect.sid

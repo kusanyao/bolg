@@ -14,7 +14,7 @@ a {
 	height: 80px;
 	background: #22292e;
 }
-.g-bd {
+.g-bd,.g-ft{
 	width: 928px;
 	margin: auto;
 }
@@ -36,7 +36,7 @@ a {
 	float: left;
 	width: 200px;
 	height: 60px;
-	background: url(../img/ksy-logo.png) no-repeat;
+	background: url(/img/ksy-logo.png) no-repeat;
 	background-size: 200px 60px;
 }
 .nav {
