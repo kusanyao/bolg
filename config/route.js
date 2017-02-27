@@ -13,9 +13,9 @@ module.exports = function (app) {
 		next();
 	});
 	app.get('/', Index.index);
+	app.get('/article/edit', Article.edit);  //编辑文章页面
 	app.get('/article/:id', Article.detail); //文章详情页面
-	app.get('/article/edit', User.checkLogin, Article.edit);
-	app.post('/article/edit', User.checkLogin, Article.edit_ac);
+	app.post('/article/save', User.checkLogin, Article.save); //保存文章操作
 
 
 

@@ -2,7 +2,7 @@
 	$('#atricle-edit').click(function(){
 		var data = $('#atricle-edit').parents('form').serialize();
 		$.ajax({
-			url:'/article/edit',
+			url:'/article/save',
 			data:data,
 			type:'post',
 			success:function(res){

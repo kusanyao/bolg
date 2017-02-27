@@ -2,7 +2,7 @@ var _       = require('underscore');
 var Article = require('../models/article');
 
 
-module.exports.edit_ac = function (req,res) {
+module.exports.save = function (req,res) {
 	var _articleObj = {
 		title: req.body.title,
 		content: req.body.content
@@ -46,5 +46,14 @@ module.exports.list = function () {
 }
 
 module.exports.edit = function (req,res) {
-	res.render('article/edit');
+	if(req.query.id){
+		Article.findById(req.query.id,function(err,result){
+			if(err){
+				return res.redirect('/');
+			}
+			res.render('article/edit',{article:result});
+		});
+	}else{
+		res.render('article/edit');
+	}
 }
