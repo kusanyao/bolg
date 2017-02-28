@@ -88,7 +88,6 @@ a {
 	font-weight:900;
 }
 .list .a-abs{
-	height: 30px;
 	line-height: 30px;
 }
 .list .a-abs .a-logo{
@@ -131,4 +130,14 @@ a {
 	box-shadow: 1px 1px 5px #888888;
 	color: #999;
 	line-height: 25px;
+}
+.clearfix{
+    *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
 }
