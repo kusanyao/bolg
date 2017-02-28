@@ -1,11 +1,13 @@
 extends ../public/layout
 block content
-    each item in articles
-        .list
-            .a-title
-                a(href="/article/#{item.id}") #{item.title}
-            .a-abs
-                .a-logo
-                    img.a-logo(src="./img/title_logo.jpg")
-                p #{item.abstract}
-            .a-opt
+	each item in articles
+		.list
+			.a-title
+				a(href="/article/#{item.id}") #{item.title}
+			.a-abs.clearfix
+				.a-logo
+					img.a-logo(src="./img/title_logo.jpg")
+				p #{item.abstract}
+			.a-opt 
+				a(href="/article/edit?id=#{item.id}") 编辑
+				a(href="#") 评论

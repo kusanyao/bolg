@@ -10,3 +10,17 @@ body{background-color:#ededef}body,h1{padding:0;margin:0}a{text-decoration:none}
     clear: both;
 }
 
+.list .a-opt a{
+	color: #999;
+	float: right;
+	margin: 0 10px;
+}
+
+.edit-form input[type="text"]{
+	width: 350px;
+	height: 25px;
+}
+.edit-form textarea{
+	width: 615px;
+	height: 100px;
+}

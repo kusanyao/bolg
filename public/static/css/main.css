@@ -104,6 +104,10 @@ a {
 	line-height: 18px;
 	display: block;
 }
+.list .a-opt a{
+	color: #999;
+	float: right;
+}
 .article{
 	margin-bottom: 20px;
 	padding: 10px 30px 30px;
@@ -140,4 +144,9 @@ a {
     line-height: 0;
     content: "";
     clear: both;
+}
+.list .a-opt a{
+	color: #999;
+	float: right;
+	margin: 0 10px;
 }

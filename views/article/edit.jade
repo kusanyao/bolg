@@ -7,12 +7,21 @@ block content
 			label 标题
 			div
 				input(type="text",name="title",value=article.title)
+			label 标题-logo
+			div
+				input(type="file",name="focus")
 			label 摘要
 			div
-				input(type="text",name="abstract",value=article.abstract)
+				textarea(name="abstract")
+					=article.abstract
 			label 内容
-			div
-				textarea(name="content")
-					=article.content
+			div				
+				script#container(name="content",type="text/plain") !{article.content}
 			div
 				input(id="atricle-edit",type="button",value="submit")
+
+block script
+	script(type="text/javascript",src="/ueditor1_4_3_3-utf8-php/ueditor.config.js")
+	script(type="text/javascript",src="/ueditor1_4_3_3-utf8-php/ueditor.all.min.js")
+	script(type="text/javascript").
+		var ue = UE.getEditor('container');
